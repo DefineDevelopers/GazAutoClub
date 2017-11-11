@@ -1,0 +1,6 @@
+<resources>
+	<string name="app_name">Gaz Auto Club</string>
+	<string name="title_feed">Feed</string>
+	<string name="title_profile">Profile</string>
+	<string name="title_my_posts">My Posts</string>
+</resources>
