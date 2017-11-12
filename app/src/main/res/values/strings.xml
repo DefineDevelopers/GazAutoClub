@@ -3,4 +3,6 @@
 	<string name="title_feed">Feed</string>
 	<string name="title_profile">Profile</string>
 	<string name="title_my_posts">My Posts</string>
+	<string name="author_icon">author icon</string>
+	<string name="post_main_image">post main image</string>
 </resources>
