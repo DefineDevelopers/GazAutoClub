@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer-array name="ids">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+  </integer-array>
+  
+  <integer-array name="auth_ids">
+    <item>1</item>
+    <item>4</item>
+    <item>6</item>
+    <item>2</item>
+    <item>1</item>
+    <item>88</item>
+  </integer-array>
+  
+  <array name="images">
+    <item>@drawable/buic</item>
+    <item>@drawable/chry</item>
+    <item>@drawable/orange</item>
+    <item>@drawable/ptar</item>
+    <item>@drawable/swift</item>
+    <item>@drawable/vaux</item>
+  </array>
+
+  <string-array name="names">
+    <item>BUIC</item>
+    <item>Cherry</item>
+    <item>Orange Car</item>
+    <item>P-Tar</item>
+    <item>Swift</item>
+    <item>VauX</item>
+  </string-array>
+
+  <string-array name="descriptions">
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta felis in elit accumsan placerat. Sed ipsum libero, porttitor sit amet lacus vel, venenatis hendrerit purus.</item>
+    <item>Phasellus ipsum ex, molestie sollicitudin vestibulum eget, venenatis eget mauris. Pellentesque rhoncus ullamcorper rutrum.</item>
+    <item>Nullam consequat quam ligula, in elementum dui venenatis at. Vestibulum volutpat nisl diam, semper dignissim nisi malesuada et. Aliquam dapibus erat condimentum faucibus consequat. Nunc dignissim sem quam, in ornare ipsum pulvinar at.</item>
+    <item>In eget neque ut orci euismod commodo. Curabitur sollicitudin, augue id ultrices posuere, tortor tellus sodales nunc, at interdum eros leo gravida odio.</item>
+    <item>Aliquam gravida, massa sit amet faucibus ullamcorper, velit orci ullamcorper mauris, non consectetur justo nisl ut arcu. Etiam eu nisi diam. </item>
+    <item>Aenean sed libero vel odio ullamcorper malesuada eget sit amet ante. Maecenas eu magna mollis, semper lacus at, tincidunt tellus. Nulla luctus mauris vitae sodales volutpat.</item>
+  </string-array>
+</resources>

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+	
 	<item
-			android:id="@+id/navigation_home"
+			android:id="@+id/navigation_my_posts"
+			android:icon="@drawable/ic_list_black_24dp"
+			android:title="@string/title_my_posts" android:checkable="false" />
+	<item
+			android:id="@+id/navigation_feed"
 			android:icon="@drawable/ic_home_black_24dp"
 			android:title="@string/title_feed" />
-
 	<item
-			android:id="@+id/navigation_dashboard"
-			android:icon="@drawable/ic_dashboard_black_24dp"
-			android:title="@string/title_profile" />
-
-	<item
-			android:id="@+id/navigation_notifications"
-			android:icon="@drawable/ic_notifications_black_24dp"
-			android:title="@string/title_my_posts" />
-
+			android:id="@+id/navigation_profile"
+			android:icon="@drawable/ic_account_circle_black_24dp"
+			android:title="@string/title_profile" android:checkable="false" />
 </menu>
