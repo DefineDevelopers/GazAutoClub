@@ -1,8 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">Gaz Auto Club</string>
+	<string name="title_activity_enter">Enter</string>
+	<string name="description_format">%1$s\n\n%2$s</string>
 	<string name="title_feed">Feed</string>
 	<string name="title_profile">Profile</string>
 	<string name="title_my_posts">My Posts</string>
-	<string name="author_icon">author icon</string>
-	<string name="post_main_image">post main image</string>
+	<string name="comment_icon">comment icon</string>
+	<string name="like_icon">like icon</string>
+	
+	<!-- Strings related to LoginActivity -->
+	<string name="fullname">Full Name</string>
+	<string name="password">Password</string>
+	<string name="email">Email</string>
+	<string name="error_unavailable_fullname">Enter a valid fullname</string>
+	<string name="error_incorrect_email">This email is incorrect</string>
+	<string name="error_weak_password">This password is too weak</string>
+	<string name="error_not_match_fields">Email or Password does not match :(</string>
+	<string name="error_field_required">This field is required</string>
+	<string name="sign_in_with_google">Sign In with Google</string>
+	<string name="sign_in_with_vk">Sign In with VK</string>
+	<string name="progress_dialog_auth">Wait a moment…</string>
+	<string name="progress_dialog_register">Almost done…</string>
+	<string name="sm_auth_need_new_password_title">Registered new account</string>
+	<string name="sm_auth_need_new_password">We\'ve generated random password for you (you can change it in Settings). You can use it to Sign In.</string>
+	<string name="register">No account yet? Create one</string>
+	<string name="sign_in">Sign In</string>
+	<string name="register_new">Register</string>
+	<string name="sign_in_new">Have account? Sign in</string>
+	<string name="or">or</string>
+	<string name="skip_signing_in">Skip Signing In</string>
+	<string name="forgot_your_password">Forgot your password?</string>
+	<string name="send_letter">Send Letter</string>
+	<string name="back_to_login">Back to login</string>
+	<string name="pass_restore">Password restore</string>
+	<string name="pass_restore_description">We sent a letter with a password restore link to your email. Get a new password and come back soon!</string>
+	<string name="ok">OK</string>
 </resources>

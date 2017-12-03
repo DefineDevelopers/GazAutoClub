@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<data>
+		<variable
+				name="post"
+				type="net.webdefine.gazautoclub.model.Post" />
+	</data>
+	
+	<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="3dp"
+			app:cardElevation="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginBottom="16dp"
+			android:focusable="true"
+			android:clickable="true"
+			android:foreground="@drawable/selectable_effect">
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:background="@color/cardview_light_background">
+			
+			<!--suppress AndroidUnknownAttribute -->
+			<ImageView
+					android:id="@+id/post_image"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:adjustViewBounds="true"
+					android:contentDescription="@null"
+					android:scaleType="centerCrop"
+					android:cropToPadding="false"
+					imageResource="@{post.imageResId}" />
+			<TextView
+					android:id="@+id/post_name"
+					style="@style/TextAppearance.AppCompat.Subhead.Inverse"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@color/colorText"
+					android:textColor="@color/colorPrimaryDark"
+					android:minHeight="@dimen/recycler_item_footer_height_min"
+					android:textSize="20sp"
+					android:text="@{post.name}"
+					tools:text="Title"
+					android:fontFamily="sans-serif"
+					android:padding="16dp" />
+			<android.support.constraint.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="24dp">
+				<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/ic_access_time_gray_24dp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintEnd_toStartOf="@id/post_meta"
+						android:id="@+id/post_time_icon" android:layout_marginStart="16dp"
+						android:contentDescription="TODO" />
+				<TextView
+						android:id="@+id/post_meta"
+						style="@style/TextAppearance.AppCompat.Subhead.Inverse"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:background="@color/colorText"
+						android:textColor="@color/colorTextSecondary"
+						android:minHeight="@dimen/recycler_item_footer_height_min"
+						android:textSize="14sp"
+						android:text="16 hours ago by Andreas S."
+						tools:text="Author and time"
+						android:fontFamily="sans-serif"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toEndOf="@+id/post_time_icon" android:layout_marginStart="8dp"
+						android:gravity="center_vertical" />
+			</android.support.constraint.ConstraintLayout>
+			
+			<TextView
+					android:id="@+id/post_content"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="@{post.description}"
+					tools:text="Description"
+					android:textColor="@color/colorTextPrimary"
+					android:fontFamily="serif"
+					android:padding="16dp" />
+			<LinearLayout
+					android:id="@+id/linearLayout"
+					android:background="@color/colorText"
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false">
+				<RelativeLayout
+						android:id="@+id/like_block"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:paddingBottom="10dp"
+						android:paddingTop="10dp"
+						android:clickable="true"
+						android:foreground="?android:attr/selectableItemBackground"
+						android:layout_height="wrap_content"
+						android:focusable="true"
+						android:background="@color/colorPrimary">
+					<ImageView
+							android:id="@+id/like_icon"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignBottom="@+id/likes_count"
+							android:layout_alignTop="@+id/likes_count"
+							android:contentDescription="@string/like_icon"
+							app:srcCompat="@drawable/ic_favorite_blue_24dp" />
+					<TextView
+							android:id="@+id/likes_count"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/colorText"
+							android:textAlignment="viewStart"
+							android:layout_toEndOf="@+id/like_icon"
+							android:layout_marginStart="10dp"
+							android:textSize="16sp"
+							android:gravity="start"
+							android:text="5"
+							tools:text="Likes count" />
+				</RelativeLayout>
+					
+				<RelativeLayout
+						android:id="@+id/comment_block"
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:paddingBottom="10dp"
+						android:paddingTop="10dp"
+						android:clickable="true"
+						android:foreground="?android:attr/selectableItemBackground"
+						android:layout_height="wrap_content"
+						android:focusable="true"
+						android:background="@color/colorPrimary">
+					<ImageView
+							android:id="@+id/comment_icon"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignBottom="@+id/comments_count"
+							android:layout_alignTop="@+id/comments_count"
+							android:contentDescription="@string/comment_icon"
+							app:srcCompat="@drawable/ic_chat_blue_24dp" />
+					<TextView
+							android:id="@+id/comments_count"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/colorText"
+							android:textAlignment="viewStart"
+							android:layout_toEndOf="@+id/comment_icon"
+							android:layout_marginStart="10dp"
+							android:textSize="16sp"
+							android:gravity="start"
+							android:text="10"
+							tools:text="Comments count" />
+				</RelativeLayout>
+			</LinearLayout>
+		
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+</layout>

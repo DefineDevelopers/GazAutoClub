@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <integer-array name="ids">
+  <integer-array name="positions">
     <item>1</item>
     <item>2</item>
     <item>3</item>
@@ -18,6 +18,24 @@
     <item>88</item>
   </integer-array>
   
+  <integer-array name="likes_count">
+    <item>5</item>
+    <item>8</item>
+    <item>12</item>
+    <item>48</item>
+    <item>0</item>
+    <item>88</item>
+  </integer-array>
+  
+  <integer-array name="comments_count">
+    <item>0</item>
+    <item>2</item>
+    <item>4</item>
+    <item>12</item>
+    <item>0</item>
+    <item>70</item>
+  </integer-array>
+  
   <array name="images">
     <item>@drawable/buic</item>
     <item>@drawable/chry</item>
@@ -26,16 +44,16 @@
     <item>@drawable/swift</item>
     <item>@drawable/vaux</item>
   </array>
-
+  
   <string-array name="names">
-    <item>BUIC</item>
+    <item>Material Design. Динамический Toolbar на живом примере</item>
     <item>Cherry</item>
     <item>Orange Car</item>
     <item>P-Tar</item>
     <item>Swift</item>
     <item>VauX</item>
   </string-array>
-
+  
   <string-array name="descriptions">
     <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta felis in elit accumsan placerat. Sed ipsum libero, porttitor sit amet lacus vel, venenatis hendrerit purus.</item>
     <item>Phasellus ipsum ex, molestie sollicitudin vestibulum eget, venenatis eget mauris. Pellentesque rhoncus ullamcorper rutrum.</item>
@@ -43,5 +61,34 @@
     <item>In eget neque ut orci euismod commodo. Curabitur sollicitudin, augue id ultrices posuere, tortor tellus sodales nunc, at interdum eros leo gravida odio.</item>
     <item>Aliquam gravida, massa sit amet faucibus ullamcorper, velit orci ullamcorper mauris, non consectetur justo nisl ut arcu. Etiam eu nisi diam. </item>
     <item>Aenean sed libero vel odio ullamcorper malesuada eget sit amet ante. Maecenas eu magna mollis, semper lacus at, tincidunt tellus. Nulla luctus mauris vitae sodales volutpat.</item>
+  </string-array>
+  
+  <integer-array name="comment_ids">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </integer-array>
+  
+  <integer-array name="comment_auth_ids">
+    <item>1</item>
+    <item>4</item>
+    <item>2</item>
+  </integer-array>
+	
+	<string-array name="comment_auth_names">
+		<item>Raul D.</item>
+		<item>Maxim B.</item>
+		<item>Joe S.</item>
+	</string-array>
+	
+	<string-array name="comment_times">
+		<item>16 hours ago</item>
+		<item>1 day ago</item>
+		<item>22 Nov. at 12:35</item>
+	</string-array>
+  <string-array name="comment_content">
+    <item>That is really nice.</item>
+    <item>Phasellus ipsum ex, molestie sollicitudin vestibulum eget, venenatis eget mauris. Pellentesque rhoncus ullamcorper rutrum.</item>
+    <item>Nullam consequat quam ligula, in elementum dui venenatis at. Vestibulum volutpat nisl diam, semper dignissim nisi malesuada et. Aliquam dapibus erat condimentum faucibus consequat. Nunc dignissim sem quam, in ornare ipsum pulvinar at.</item>
   </string-array>
 </resources>

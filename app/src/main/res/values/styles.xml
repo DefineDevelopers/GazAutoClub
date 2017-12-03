@@ -1,11 +1,62 @@
 <resources>
-
 	<!-- Base application theme. -->
-	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-		<!-- Customize your theme here. -->
+	<style name="AppTheme" parent="Theme.AppCompat">
 		<item name="colorPrimary">@color/colorPrimary</item>
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorAccent">@color/colorAccent</item>
 	</style>
-
+	
+	<style name="AppTheme.NoActionBarWithStatusBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowNoTitle">true</item> <!-- Hides the Action Bar -->
+		
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:windowBackground">@color/colorLight</item>
+		<item name="android:textColor">@color/colorTextPrimary</item>
+		<item name="android:textColorHint">@color/colorText</item>
+		
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorText</item>
+		
+		<item name="colorControlNormal">@color/colorPrimary</item>
+		<item name="colorControlActivated">@color/colorPrimaryDark</item>
+		
+		<item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+		<item name="alertDialogTheme">@style/Theme.AppCompat.DayNight.Dialog.Alert</item>
+		
+		<item name="android:listSeparatorTextViewStyle">@style/PreferenceListHeader</item>
+	</style>
+	
+	<style name="PreferenceListHeader">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:background">#cccccc</item>
+	</style>
+	
+	<!--Error label text style-->
+	<style name="errorLayoutInputText" parent="TextAppearance.AppCompat.Small">
+		<item name="android:textColor">@color/colorPrimaryDark</item>
+	</style>
+	
+	<!--Input field style-->
+	<style name="errorLayoutInputField" parent="Theme.AppCompat.Light">
+		<item name="colorControlNormal">@color/colorPrimaryDark</item>
+		<item name="colorControlActivated">@color/colorPrimaryDark</item>
+	</style>
+	
+	<style name="TextAppearence.TextInputLayout" parent="@android:style/TextAppearance">
+		<item name="android:textColor">@color/colorText</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="CustomButtonColor" parent="ThemeOverlay.AppCompat">
+		<item name="colorButtonNormal">@color/colorPrimaryDark</item>
+	</style>
+	
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

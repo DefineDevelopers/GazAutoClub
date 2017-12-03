@@ -1,9 +1,9 @@
-package net.webdefine.gazautoclub
+package net.webdefine.gazautoclub.adapter
 
 import android.databinding.BindingAdapter
 import android.widget.ImageView
 
-object DataBindingAdapters {
+object DataBindingAdapter {
 
   @BindingAdapter("android:src")
   fun setImageResource(imageView: ImageView, resource: Int) {
