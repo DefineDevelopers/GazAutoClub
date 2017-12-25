@@ -1,6 +1,79 @@
-<resources>
-	<string name="app_name">Gaz Auto Club</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<string name="app_name" translatable="false">Gaz Auto Club</string>
+	<string name="client_id" translatable="false">Cu2ZvNrofB5OYwoArdMpa9Wv1hXVLUVeAq9tAi8y</string>
+	<string name="client_secret" translatable="false">
+		ngoIxe5tfT5450WIEQqfTfWOjIwGwTU3hoyWv2SLoX40LlNm36vuDVGDZIjQ8vgPAQeUJYd0JEocG9FN2yq5VF5GzBseUzWvRr4zDTsYhCjhsyuJMcyDVupsV01fqJoF
+	</string>
+	<integer name="com_vk_sdk_AppId" tools:keep="@integer/com_vk_sdk_AppId">6282345</integer>
+	<string name="title_activity_enter">Enter</string>
 	<string name="title_feed">Feed</string>
 	<string name="title_profile">Profile</string>
 	<string name="title_my_posts">My Posts</string>
+	<string name="comment_icon" tools:keep="@string/comment_icon">comment icon</string>
+	<string name="like_icon" tools:keep="@string/like_icon">like icon</string>
+	
+	<!-- Strings related to LoginActivity -->
+	<string name="fullname">Full Name</string>
+	<string name="password">Password</string>
+	<string name="email">Email</string>
+	<string name="error_unavailable_fullname">Enter a valid fullname</string>
+	<string name="error_incorrect_email">This email is incorrect</string>
+	<string name="error_weak_password">This password is too weak</string>
+	<string name="error_not_match_fields">Email or Password does not match</string>
+	<string name="error_field_required">This field is required</string>
+	<string name="sign_in_with_google">Sign In with Google</string>
+	<string name="sign_in_with_vk">Sign In with VK</string>
+	<string name="progress_dialog_auth">Wait a moment…</string>
+	<string name="progress_dialog_register">Almost done…</string>
+	<string name="sm_auth_need_new_password_title" translatable="false"
+	        tools:keep="@string/sm_auth_need_new_password_title">Registered new account</string>
+	<string name="sm_auth_need_new_password" translatable="false" tools:keep="@string/sm_auth_need_new_password">We\'ve generated random password for you (you can
+		change it in Settings).
+		You can use it to Sign In.
+	</string>
+	<string name="register">No account yet? Create one</string>
+	<string name="sign_in">Sign In</string>
+	<string name="register_new">Register</string>
+	<string name="sign_in_new">Have account? Sign in</string>
+	<string name="or">or</string>
+	<string name="skip_signing_in">Skip Signing In</string>
+	<string name="forgot_your_password">Forgot your password?</string>
+	<string name="send_letter">Send Letter</string>
+	<string name="back_to_login">Back to login</string>
+	<string name="pass_restore" tools:keep="@string/pass_restore">Password restore</string>
+	<string name="pass_restore_description" translatable="false" tools:keep="@string/pass_restore_description">We sent a letter with a password restore link to your
+		email. Get a new
+		password and come back soon!
+	</string>
+	<string name="ok" tools:keep="@string/ok">OK</string>
+	
+	<!-- Strings related to Settings -->
+	
+	<!-- Example General settings -->
+	
+	<!-- Example settings for Notifications -->
+	
+	<string name="title_activity_new_note" translatable="false">NewNoteActivity</string>
+	<string name="login" translatable="false">Login</string>
+	<string name="select_image">Select image…</string>
+	<string name="select_model">Select Model</string>
+	<string name="title">Title</string>
+	<string name="content_markdown_support">Content (Markdown Support)</string>
+	<string name="post">Publish</string>
+	<string name="post_time_icon">Post time icon</string>
+	<string name="post_image">Post image</string>
+	<string name="your_message">Your message</string>
+	<string name="send_message">Send message</string>
+	<string name="user_image">User Image</string>
+	<string name="profile_image">Profile Image</string>
+	<string name="upload">Upload</string>
+	<string name="first_name">First Name</string>
+	<string name="second_name">Second Name</string>
+	<string name="username">Username</string>
+	<string name="change_password">Change Password</string>
+	<string name="new_post">New Post</string>
+	<string name="sign_out">Sign Out</string>
+	<string name="select_brand">Select Brand</string>
+	<string name="user_has_no_notes">You have no own posts yet</string>
 </resources>
