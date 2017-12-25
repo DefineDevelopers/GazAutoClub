@@ -25,7 +25,33 @@
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
-				android:layout_marginTop="32dp" android:gravity="center" />
+				android:layout_marginTop="32dp"
+				android:gravity="center" />
+		
+		<!-- Login Label -->
+		<android.support.design.widget.TextInputLayout
+				android:id="@+id/login_text_layout"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:errorTextAppearance="@style/errorLayoutInputText"
+				app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
+				android:visibility="visible"
+				app:layout_constraintTop_toBottomOf="@+id/logo_text"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:layout_marginStart="32dp"
+				android:layout_marginEnd="32dp">
+			
+			<android.support.design.widget.TextInputEditText
+					android:id="@+id/input_login"
+					android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+					android:hint="@string/login"
+					android:textColor="@color/colorText"
+					android:textSize="20sp"
+					android:inputType="textCapWords|textPersonName"
+					android:theme="@style/errorLayoutInputField" />
+		</android.support.design.widget.TextInputLayout>
 		
 		<!-- Fullname Label -->
 		<android.support.design.widget.TextInputLayout
@@ -35,19 +61,20 @@
 				app:errorTextAppearance="@style/errorLayoutInputText"
 				app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
 				android:visibility="gone"
-				app:layout_constraintTop_toBottomOf="@+id/logo_text"
+				app:layout_constraintTop_toBottomOf="@+id/login_text_layout"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp"
 				android:layout_marginEnd="32dp">
 			
-			<EditText android:id="@+id/input_fullname"
-			          android:layout_width="match_parent"
-			          android:layout_height="wrap_content"
-			          android:hint="@string/fullname"
-			          android:textColor="@color/colorText"
-			          android:textSize="20sp"
-			          android:inputType="textCapWords|textPersonName"
-			          android:theme="@style/errorLayoutInputField" />
+			<android.support.design.widget.TextInputEditText
+					android:id="@+id/input_fullname"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="@string/fullname"
+					android:textColor="@color/colorText"
+					android:textSize="20sp"
+					android:inputType="textCapWords|textPersonName"
+					android:theme="@style/errorLayoutInputField" />
 		</android.support.design.widget.TextInputLayout>
 		
 		<!-- Email Label -->
@@ -60,15 +87,16 @@
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/fullname_text_layout" android:layout_marginStart="32dp"
-				android:layout_marginEnd="32dp">
-			<EditText android:id="@+id/input_email"
-			          android:layout_width="match_parent"
-			          android:layout_height="wrap_content"
-			          android:inputType="textEmailAddress"
-			          android:hint="@string/email"
-			          android:textColor="@color/colorText"
-			          android:theme="@style/errorLayoutInputField"
-			          android:textSize="20sp" />
+				android:layout_marginEnd="32dp" android:visibility="gone">
+			<android.support.design.widget.TextInputEditText
+					android:id="@+id/input_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textEmailAddress"
+					android:hint="@string/email"
+					android:textColor="@color/colorText"
+					android:theme="@style/errorLayoutInputField"
+					android:textSize="20sp" />
 		</android.support.design.widget.TextInputLayout>
 		
 		<!-- Password Label -->
@@ -81,8 +109,9 @@
 				app:layout_constraintTop_toBottomOf="@+id/email_text_layout"
 				app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
 				android:layout_marginEnd="32dp" android:layout_marginStart="32dp">
-			<EditText android:id="@+id/input_password"
-			          android:layout_width="match_parent"
+			<android.support.design.widget.TextInputEditText
+					android:id="@+id/input_password"
+					android:layout_width="match_parent"
 			          android:layout_height="wrap_content"
 			          android:inputType="textPassword"
 			          android:hint="@string/password"
@@ -91,13 +120,13 @@
 			          android:textSize="20sp" />
 		</android.support.design.widget.TextInputLayout>
 		
-		<!--Sign In button-->
+		<!--Sign In button -->
 		<Button
+				android:id="@+id/login"
 				android:layout_width="0dp"
 				android:layout_height="60dp"
 				android:text="@string/sign_in"
 				android:textAllCaps="false"
-				android:id="@+id/login"
 				android:textSize="18sp"
 				android:textColor="@color/colorText"
 				android:theme="@style/CustomButtonColor"
@@ -108,7 +137,7 @@
 				android:layout_marginEnd="32dp"
 				android:layout_marginStart="32dp" />
 		
-		<!--Register button-->
+		<!--Register button -->
 		<Button
 				android:layout_width="0dp"
 				android:layout_height="48dp"
@@ -122,7 +151,7 @@
 				app:layout_constraintStart_toStartOf="parent"
 				android:layout_marginEnd="32dp" android:layout_marginStart="32dp" />
 		
-		<!--Register new button-->
+		<!--Register new button -->
 		<Button
 				android:layout_width="0dp"
 				android:layout_height="60dp"
@@ -137,7 +166,7 @@
 				app:layout_constraintTop_toBottomOf="@+id/password_text_layout" android:layout_marginTop="24dp"
 				android:layout_marginEnd="32dp" android:layout_marginStart="32dp" />
 		
-		<!--Sign In new button-->
+		<!--Sign In new button -->
 		<Button
 				android:id="@+id/login_new"
 				android:layout_width="0dp"
@@ -153,7 +182,7 @@
 				app:layout_constraintTop_toBottomOf="@+id/register_new" android:layout_marginEnd="32dp"
 				android:layout_marginStart="32dp" />
 		
-		<!-- Send letter button-->
+		<!-- Send letter button -->
 		<Button
 				android:id="@+id/restore_new"
 				android:layout_width="0dp"
@@ -171,7 +200,7 @@
 				app:layout_constraintTop_toTopOf="@+id/password_text_layout"
 				android:layout_marginTop="16dp" />
 		
-		<!-- Forgot statement button-->
+		<!-- Forgot statement button -->
 		<Button
 				android:id="@+id/forgot_password"
 				android:layout_width="0dp"
@@ -184,8 +213,9 @@
 				app:layout_constraintTop_toBottomOf="@+id/register"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
-				android:layout_marginEnd="32dp" />
+				android:layout_marginEnd="32dp" android:visibility="gone" />
 		
+		<!-- Or frame -->
 		<FrameLayout
 				android:id="@+id/or_frame_layout"
 				android:layout_width="match_parent"
@@ -214,6 +244,7 @@
 					android:background="@color/colorPrimary" />
 		</FrameLayout>
 		
+		<!-- Google SI -->
 		<Button
 				android:id="@+id/google_si"
 				android:layout_width="match_parent"
@@ -227,8 +258,9 @@
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/or_frame_layout"
 				android:textColor="@color/colorText" android:layout_marginStart="32dp"
-				android:layout_marginEnd="32dp" />
+				android:layout_marginEnd="32dp" android:visibility="gone" />
 		
+		<!-- VK SI -->
 		<Button
 				android:id="@+id/vk_si"
 				android:layout_width="match_parent"
@@ -245,11 +277,12 @@
 				android:layout_marginEnd="32dp" android:textColor="@color/colorText" />
 		
 		<android.support.design.widget.CoordinatorLayout
-				android:id="@+id/coordinator_layout_content"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_alignParentBottom="true"
 				android:layout_alignParentEnd="true" app:layout_constraintBottom_toBottomOf="parent" />
+		
+		<!-- Anonymous Enter -->
 		<Button
 				android:id="@+id/anonymous"
 				android:layout_width="0dp"
@@ -260,13 +293,11 @@
 				android:textColor="@color/colorPrimaryDark"
 				style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
 				android:theme="@style/CustomButtonColor"
-				android:visibility="visible"
 				android:layout_marginEnd="32dp"
 				android:layout_marginStart="32dp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/vk_si" app:layout_constraintHorizontal_bias="0.548"
-				app:layout_constraintBottom_toBottomOf="@+id/coordinator_layout_content"
-				android:layout_marginBottom="32dp" />
+				app:layout_constraintTop_toBottomOf="@+id/vk_si"
+		/>
 	</android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -4,24 +4,47 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "net.webdefine.gazautoclub"
         minSdkVersion 17
-        targetSdkVersion 26
-        versionCode 1
-        versionName "0.1"
+        targetSdkVersion 27
+        versionCode 9
+        versionName "1.1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
-    buildTypes {
+    signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file("D:\\Programming\\Define\\GazAutoClub\\release.jks")
+            storePassword "SZ3VFMrhgh"
+            keyAlias "Key0"
+            keyPassword "SZ3VFMrhgh"
+        }
+
+        buildTypes {
+            debug {
+                minifyEnabled true
+                useProguard false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                        'proguard-rules.pro'
+            }
+            release {
+                minifyEnabled true
+                signingConfig signingConfigs.release
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
         }
     }
+    /*buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }*/
 
     dataBinding {
         enabled = true
@@ -29,7 +52,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:recyclerview-v7:$support_version"
     implementation "com.android.support:design:$support_version"
@@ -37,7 +60,8 @@ dependencies {
     implementation "com.android.support:palette-v7:$support_version"
     implementation "com.android.support:preference-v7:$support_version"
     implementation "com.android.support:preference-v14:$support_version"
-
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.code.gson:gson:2.8.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
@@ -45,17 +69,58 @@ dependencies {
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
 
+    // for nice bottom navigation panel
     implementation 'com.aurelhubert:ahbottomnavigation:2.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation "com.google.code.gson:gson:2.8.0"
 
+    // library helps to work with images
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // Fuel -- http requests library
+    implementation "com.github.kittinunf.fuel:fuel:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-android:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-livedata:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-rxjava:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-gson:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-jackson:$fuel_latest_version"
+    implementation "com.github.kittinunf.fuel:fuel-moshi:$fuel_latest_version"
+    implementation 'com.github.kittinunf.forge:forge:0.3.0'
+
+    //compile 'com.github.simbiose:Encryption:2.0.1'
+    implementation 'joda-time:joda-time:2.9.9'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    implementation 'com.beust:klaxon:0.30'
+
+    // json parser
+    implementation 'com.vk:androidsdk:1.6.9'
+
+    // usefull extensions
+    implementation 'com.mcxiaoke.koi:core:0.5.5'
+
+    // webview with markdown support
+    implementation 'us.feras.mdv:markdownview:1.1.0'
+    compile 'ru.noties:markwon:1.0.1'
+    compile 'ru.noties:markwon-image-loader:1.0.1' // optional
+    compile 'ru.noties:markwon-view:1.0.1' // optional
+
+    implementation files('libs/conceal_android.jar')
+    implementation files('libs/libconceal.jar')
+
+    // library for http queries
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+
+    // fork improved for work with Kotlin
+    implementation 'com.github.frendyxzc:KHttp:0.0.10'
+
+    // tests
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:support-vector-drawable:27.0.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     testImplementation 'junit:junit:4.12'
-
     kapt "com.android.databinding:compiler:$android_plugin_version"
 
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:multidex:1.0.2'
 }
 
 kapt {
@@ -73,5 +138,10 @@ buildscript {
 kotlin {
     experimental {
         coroutines "enable"
+    }
+}
+configurations {
+    all {
+        exclude group: 'org.json', module: 'json'
     }
 }

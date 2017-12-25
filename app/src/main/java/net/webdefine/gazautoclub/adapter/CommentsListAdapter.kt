@@ -14,7 +14,8 @@ class CommentsListAdapter(context: Context, private val comments: ArrayList<Comm
     private          val layoutInflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): CommentsListAdapter.ViewHolder {
-        val commentLayoutBinding = CommentLayoutBinding.inflate(layoutInflater, viewGroup, false)
+        val commentLayoutBinding = CommentLayoutBinding.inflate(layoutInflater, viewGroup,
+                false)
         return ViewHolder(commentLayoutBinding.root, commentLayoutBinding)
     }
 

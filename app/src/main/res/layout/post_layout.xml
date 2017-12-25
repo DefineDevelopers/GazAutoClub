@@ -17,10 +17,10 @@
 			app:cardElevation="8dp"
 			android:layout_marginEnd="8dp"
 			android:layout_marginStart="8dp"
-			android:layout_marginBottom="16dp"
+			android:layout_marginBottom="8dp"
 			android:focusable="true"
 			android:clickable="true"
-			android:foreground="@drawable/selectable_effect">
+			android:layout_marginTop="8dp">
 		<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -33,21 +33,20 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:adjustViewBounds="true"
-					android:contentDescription="@null"
 					android:scaleType="centerCrop"
 					android:cropToPadding="false"
-					imageResource="@{post.imageResId}" />
+					android:contentDescription="TODO" />
 			<TextView
 					android:id="@+id/post_name"
 					style="@style/TextAppearance.AppCompat.Subhead.Inverse"
+					android:text="@{post.name}"
+					tools:text="Title"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:background="@color/colorText"
 					android:textColor="@color/colorPrimaryDark"
 					android:minHeight="@dimen/recycler_item_footer_height_min"
 					android:textSize="20sp"
-					android:text="@{post.name}"
-					tools:text="Title"
 					android:fontFamily="sans-serif"
 					android:padding="16dp" />
 			<android.support.constraint.ConstraintLayout
@@ -56,12 +55,13 @@
 				<ImageView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:src="@drawable/ic_access_time_gray_24dp"
+						app:srcCompat="@drawable/ic_access_time_gray_24dp"
 						app:layout_constraintBottom_toBottomOf="parent"
 						app:layout_constraintTop_toTopOf="parent"
 						app:layout_constraintStart_toStartOf="parent"
 						app:layout_constraintEnd_toStartOf="@id/post_meta"
-						android:id="@+id/post_time_icon" android:layout_marginStart="16dp"
+						android:id="@+id/post_time_icon"
+						android:layout_marginStart="16dp"
 						android:contentDescription="TODO" />
 				<TextView
 						android:id="@+id/post_meta"
@@ -72,13 +72,14 @@
 						android:textColor="@color/colorTextSecondary"
 						android:minHeight="@dimen/recycler_item_footer_height_min"
 						android:textSize="14sp"
-						android:text="16 hours ago by Andreas S."
-						tools:text="Author and time"
+						android:text="@{post.time + ' ' +  post.authorName}"
+						tools:text="Time and author"
 						android:fontFamily="sans-serif"
 						app:layout_constraintBottom_toBottomOf="parent"
 						app:layout_constraintTop_toTopOf="parent"
 						app:layout_constraintEnd_toEndOf="parent"
-						app:layout_constraintStart_toEndOf="@+id/post_time_icon" android:layout_marginStart="8dp"
+						app:layout_constraintStart_toEndOf="@+id/post_time_icon"
+						android:layout_marginStart="8dp"
 						android:gravity="center_vertical" />
 			</android.support.constraint.ConstraintLayout>
 			
@@ -86,11 +87,43 @@
 					android:id="@+id/post_content"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:text="@{post.description}"
-					tools:text="Description"
 					android:textColor="@color/colorTextPrimary"
-					android:fontFamily="serif"
+					android:text="@{post.description}"
+					tools:text="Content"
 					android:padding="16dp" />
+			<android.support.constraint.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dp">
+				<ImageView
+						android:id="@+id/post_car_icon"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						app:srcCompat="@drawable/ic_directions_car_gray_24dp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintEnd_toStartOf="@id/post_car_info"
+						android:layout_marginStart="16dp"
+						android:contentDescription="TODO" />
+				<TextView
+						android:id="@+id/post_car_info"
+						style="@style/TextAppearance.AppCompat.Subhead.Inverse"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:background="@color/colorText"
+						android:textColor="@color/colorTextSecondary"
+						android:minHeight="@dimen/recycler_item_footer_height_min"
+						android:textSize="14sp"
+						android:text="@{post.carName}"
+						tools:text="Car info"
+						android:fontFamily="sans-serif"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toEndOf="@+id/post_car_icon"
+						android:layout_marginStart="8dp"
+						android:gravity="center_vertical" />
+			</android.support.constraint.ConstraintLayout>
 			<LinearLayout
 					android:id="@+id/linearLayout"
 					android:background="@color/colorText"
@@ -128,10 +161,10 @@
 							android:layout_marginStart="10dp"
 							android:textSize="16sp"
 							android:gravity="start"
-							android:text="5"
+							android:text="@{Integer.toString(post.likes)}"
 							tools:text="Likes count" />
 				</RelativeLayout>
-					
+				
 				<RelativeLayout
 						android:id="@+id/comment_block"
 						android:layout_width="0dp"
@@ -162,7 +195,7 @@
 							android:layout_marginStart="10dp"
 							android:textSize="16sp"
 							android:gravity="start"
-							android:text="10"
+							android:text="@{Integer.toString(post.comments)}"
 							tools:text="Comments count" />
 				</RelativeLayout>
 			</LinearLayout>

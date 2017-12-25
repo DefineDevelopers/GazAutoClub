@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="app_name">GazAutoClub</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
 	<string name="title_feed">Лента</string>
 	<string name="title_profile">Профиль</string>
 	<string name="title_my_posts">Мои посты</string>
+	<string name="select_image">Выбрать изображение…</string>
+	<string name="select_brand">Выбрать фирму</string>
+	<string name="select_model">Выбрать модель</string>
+	<string name="title">Заголовок</string>
+	<string name="content_markdown_support">Содержание (Поддержка Markdown)</string>
+	<string name="post">Опубликовать</string>
+	<string name="post_time_icon">Иконка время поста</string>
+	<string name="post_image">Изображение поста</string>
+	<string name="your_message">Ваше сообщение</string>
+	<string name="send_message">Послать сообщение</string>
+	<string name="user_image">Фото пользователя</string>
+	<string name="profile_image">Фото профиля</string>
+	<string name="upload">Загрузить</string>
+	<string name="first_name">Имя</string>
+	<string name="second_name">Фамилия</string>
+	<string name="email">Email</string>
+	<string name="username">Логин</string>
+	<string name="password">Пароль</string>
+	<string name="change_password">Сменить пароль</string>
+	<string name="new_post">Новый пост</string>
+	<string name="sign_out">Выйти</string>
+	<string name="sign_in">Войти</string>
+	<string name="title_activity_enter">Авторизация</string>
+	<string name="comment_icon" tools:keep="@string/comment_icon">иконка комментария</string>
+	<string name="like_icon" tools:keep="@string/like_icon">иконка лайка</string>
+	<string name="fullname">Полное имя</string>
+	<string name="error_unavailable_fullname">Введите правильное полное имя</string>
+	<string name="error_incorrect_email">Неверный email</string>
+	<string name="error_weak_password">Пароль слишком слабый</string>
+	<string name="error_not_match_fields">Неверный email или пароль</string>
+	<string name="error_field_required">Это обязательное поле</string>
+	<string name="sign_in_with_google">Войти через Google</string>
+	<string name="sign_in_with_vk">Войти через VK</string>
+	<string name="progress_dialog_auth">Подождите секунду…</string>
+	<string name="progress_dialog_register">Почти готово…</string>
+	<string name="register">Нет аккаунта? Создайте</string>
+	<string name="register_new">Зарегистрироваться</string>
+	<string name="sign_in_new">Уже есть аккаунт?</string>
+	<string name="or">или</string>
+	<string name="skip_signing_in">Пропустить вход</string>
+	<string name="forgot_your_password">Забыли пароль?</string>
+	<string name="send_letter">Отправить письмо</string>
+	<string name="back_to_login">Назад ко входу</string>
+	<string name="pass_restore">Восстановление пароля</string>
+	<string name="ok" tools:keep="@string/ok">Хорошо</string>
+	<string name="user_has_no_notes">У вас пока нет записей</string>
 </resources>

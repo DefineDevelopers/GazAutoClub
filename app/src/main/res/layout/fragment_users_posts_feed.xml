@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
-		xmlns:android="http://schemas.android.com/apk/res/android"
-		android:id="@+id/root_layout"
+		xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" android:background="@color/colorLight">
 	
@@ -11,6 +11,48 @@
 			android:layout_height="match_parent"
 			android:orientation="vertical"
 			android:layout_marginTop="8dp"
-			android:layout_marginBottom="48dp"/>
+			android:layout_marginBottom="48dp" android:visibility="gone" />
+	<android.support.constraint.ConstraintLayout
+			android:id="@+id/user_posts_fragment_placeholder"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="56dp">
+		
+		<ProgressBar
+				android:id="@+id/user_posts_fragment_progress"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:indeterminate="false" app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:elevation="8dp" />
+		<TextView
+				android:id="@+id/user_posts_fragment_no_posts"
+				android:text="@string/user_has_no_notes"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+				android:layout_marginBottom="8dp" android:textSize="24sp" android:textAlignment="center"
+				android:textColor="@color/colorPrimaryDark" android:paddingEnd="32dp" android:paddingStart="32dp"
+				android:visibility="gone" />
+		<Button
+				android:id="@+id/user_posts_fragment_create"
+				android:text="Создать мою первую запись"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_marginTop="24dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginEnd="8dp"
+				android:textAllCaps="false"
+				android:textSize="16sp"
+				android:textColor="@color/colorText"
+				android:theme="@style/CustomButtonColor"
+				app:layout_constraintTop_toBottomOf="@+id/user_posts_fragment_no_posts"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent" android:visibility="gone" />
+	</android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>

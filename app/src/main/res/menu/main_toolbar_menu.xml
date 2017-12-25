@@ -7,12 +7,18 @@
 	
 	<item
 			android:id="@+id/action_new_post"
-			android:title="New Post"
-			android:icon="@drawable/ic_library_add_black_24dp"
+			android:title="@string/new_post"
+			android:icon="@drawable/ic_create_white_24dp"
 			app:showAsAction="ifRoom" />
 	<item
 			android:id="@+id/action_sign_out"
-			android:title="Sign Out"
+			android:title="@string/sign_out"
 			android:icon="@drawable/ic_exit_to_app_white_24dp"
+			app:showAsAction="ifRoom" />
+	<item
+			android:id="@+id/action_sign_in"
+			android:title="@string/sign_in"
+			android:icon="@drawable/ic_account_circle_white_24dp"
+			android:visible="false"
 			app:showAsAction="ifRoom" />
 </menu>

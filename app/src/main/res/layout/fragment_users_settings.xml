@@ -4,158 +4,215 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:fillViewport="true">
-<android.support.constraint.ConstraintLayout
-		xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:app="http://schemas.android.com/apk/res-auto"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="@color/colorPrimary">
 	
-	<ImageView
-			android:id="@+id/settings_user_image"
-			android:layout_width="wrap_content"
+	<android.support.constraint.ConstraintLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="16dp"
-			android:layout_marginTop="16dp"
-			android:theme="@style/CustomButtonColor"
-			android:contentDescription="User Image"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			app:srcCompat="@drawable/ic_account_box_black_128dp" />
-	<TextView
-			android:id="@+id/settings_upload_image_text"
-			android:text="Profile Image"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textColor="@color/colorPrimaryLight"
-			android:textSize="18sp"
-			android:layout_marginEnd="16dp"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toTopOf="@+id/settings_user_image" android:paddingEnd="24dp"
-			android:paddingStart="24dp" />
-	<!--Sign In button-->
-	<Button
-			android:id="@+id/settings_upload_image_button"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:text="Upload"
-			android:textSize="16sp"
-			android:textColor="@color/colorText"
-			android:theme="@style/CustomButtonColor"
-			app:layout_constraintEnd_toEndOf="@+id/settings_upload_image_text"
-			app:layout_constraintStart_toStartOf="@+id/settings_upload_image_text"
-			app:layout_constraintBottom_toBottomOf="@+id/settings_user_image" android:paddingBottom="16dp"
-			android:paddingTop="16dp" />
-	<!--<Button
-			android:id="@+id/settings_upload_image_button"
-			android:text="Upload"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="8dp"
-			app:layout_constraintEnd_toEndOf="@+id/settings_upload_image_text"
-			app:layout_constraintStart_toStartOf="@+id/settings_upload_image_text"
-			app:layout_constraintBottom_toBottomOf="@+id/settings_user_image"
-			android:background="@color/colorPrimaryDark" android:textColor="@color/colorText" />-->
-	<TextView
-			android:id="@+id/settings_edit_mode_text"
-			android:text="Edit Mode"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="24dp"
-			android:layout_marginStart="16dp"
-			android:textColor="@color/colorPrimaryLight"
-			android:textSize="18sp"
-			app:layout_constraintTop_toBottomOf="@+id/settings_user_image"
-			app:layout_constraintStart_toStartOf="parent" android:paddingStart="4dp" android:paddingEnd="4dp" />
-	<Switch
-			android:id="@+id/settings_edit_mode_switch"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginEnd="16dp"
-			android:layout_marginBottom="8dp"
-			app:layout_constraintBottom_toBottomOf="@+id/settings_edit_mode_text"
-			app:layout_constraintTop_toTopOf="@+id/settings_edit_mode_text"
-			app:layout_constraintEnd_toEndOf="parent" />
-	
-	<!-- First Name Label -->
-	<android.support.design.widget.TextInputLayout
-			android:id="@+id/settings_firstname_input_layout"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
-			app:errorTextAppearance="@style/errorLayoutInputText"
-			app:layout_constraintEnd_toEndOf="@+id/settings_edit_mode_switch"
-			app:layout_constraintStart_toStartOf="@+id/settings_edit_mode_text"
-			app:layout_constraintTop_toBottomOf="@+id/settings_edit_mode_text">
-		<EditText android:id="@+id/settings_firstname_input"
-		          android:layout_width="match_parent"
-		          android:layout_height="wrap_content"
-		          android:inputType="textEmailAddress"
-		          android:hint="First Name"
-		          android:textColor="@color/colorText"
-		          android:theme="@style/errorLayoutInputField"
-		          android:textSize="20sp" />
-	</android.support.design.widget.TextInputLayout>
-	
-	<!-- Second Name Label -->
-	<android.support.design.widget.TextInputLayout
-			android:id="@+id/settings_secondname_input_layout"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
-			app:errorTextAppearance="@style/errorLayoutInputText"
-			app:layout_constraintEnd_toEndOf="@+id/settings_edit_mode_switch"
-			app:layout_constraintStart_toStartOf="@+id/settings_edit_mode_text"
-			app:layout_constraintTop_toBottomOf="@+id/settings_firstname_input_layout">
-		<EditText android:id="@+id/settings_secondname_input"
-		          android:layout_width="match_parent"
-		          android:layout_height="wrap_content"
-		          android:inputType="textEmailAddress"
-		          android:hint="Second Name"
-		          android:textColor="@color/colorText"
-		          android:theme="@style/errorLayoutInputField"
-		          android:textSize="20sp" />
-	</android.support.design.widget.TextInputLayout>
-	
-	<!-- Email Label -->
-	<android.support.design.widget.TextInputLayout
-			android:id="@+id/settings_email_input_layout"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
-			app:errorTextAppearance="@style/errorLayoutInputText"
-			app:layout_constraintEnd_toEndOf="@+id/settings_edit_mode_switch"
-			app:layout_constraintStart_toStartOf="@+id/settings_edit_mode_text"
-			app:layout_constraintTop_toBottomOf="@+id/settings_secondname_input_layout">
-		<EditText android:id="@+id/settings_email_input"
-		          android:layout_width="match_parent"
-		          android:layout_height="wrap_content"
-		          android:inputType="textEmailAddress"
-		          android:hint="Email"
-		          android:textColor="@color/colorText"
-		          android:theme="@style/errorLayoutInputField"
-		          android:textSize="20sp" />
-	</android.support.design.widget.TextInputLayout>
-	
-	<!-- Password Label -->
-	<android.support.design.widget.TextInputLayout
-			android:id="@+id/settings_password_input_layout"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			app:hintTextAppearance="@style/TextAppearence.TextInputLayout"
-			app:errorTextAppearance="@style/errorLayoutInputText"
-			app:layout_constraintEnd_toEndOf="@+id/settings_edit_mode_switch"
-			app:layout_constraintStart_toStartOf="@+id/settings_edit_mode_text"
-			app:layout_constraintTop_toBottomOf="@+id/settings_email_input_layout"
-			app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="60dp">
-		<EditText android:id="@+id/settings_password_input"
-		          android:layout_width="match_parent"
-		          android:layout_height="wrap_content"
-		          android:inputType="textPassword"
-		          android:hint="Password"
-		          android:textColor="@color/colorText"
-		          android:theme="@style/errorLayoutInputField"
-		          android:textSize="20sp" />
-	</android.support.design.widget.TextInputLayout>
-</android.support.constraint.ConstraintLayout>
+			android:background="@color/colorLightPrimary">
+		<ImageView
+				android:id="@+id/settings_user_image"
+				android:layout_width="128dp"
+				android:layout_height="128dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="16dp"
+				android:contentDescription="@string/user_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				android:adjustViewBounds="true"
+				app:srcCompat="@drawable/ic_account_box_white_128dp" />
+		<TextView
+				android:id="@+id/settings_upload_image_text"
+				android:text="@string/profile_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/colorPrimaryDark"
+				android:textSize="18sp"
+				android:layout_marginEnd="16dp"
+				android:paddingEnd="24dp"
+				android:paddingStart="24dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/settings_user_image" />
+		<Button
+				android:id="@+id/settings_upload_image_button"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/upload"
+				android:textSize="16sp"
+				android:textColor="@color/colorText"
+				android:theme="@style/CustomButtonColor"
+				app:layout_constraintEnd_toEndOf="@+id/settings_upload_image_text"
+				app:layout_constraintStart_toStartOf="@+id/settings_upload_image_text"
+				app:layout_constraintBottom_toBottomOf="@+id/settings_user_image"
+				android:paddingBottom="16dp"
+				android:paddingTop="16dp" />
+		
+		<!-- First Name Editing -->
+		<TextView
+				android:id="@+id/firstNameLabel"
+				android:text="@string/first_name"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginStart="16dp"
+				android:layout_marginEnd="16dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/settings_upload_image_button"
+				android:textColor="@color/colorPrimary" android:layout_marginTop="32dp" />
+		<Button
+				android:id="@+id/firstNameSettingsText"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:textAlignment="gravity"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/colorPrimaryDark"
+				android:textAllCaps="false"
+				android:background="@drawable/bg_send_message"
+				app:layout_constraintTop_toBottomOf="@+id/firstNameLabel"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"  />
+		
+		<!-- Second Name Editing -->
+		<TextView
+				android:id="@+id/secondNameLabel"
+				android:text="@string/second_name"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginTop="8dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginEnd="16dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/firstNameSettingsText"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:textColor="@color/colorPrimary" />
+		<Button
+				android:id="@+id/secondNameSettingsText"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:textAlignment="gravity"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/colorPrimaryDark"
+				android:textAllCaps="false"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/secondNameLabel"
+				android:background="@drawable/bg_send_message" />
+		
+		<!-- Email Editing -->
+		<TextView
+				android:id="@+id/emailLabel"
+				android:text="@string/email"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginTop="8dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginEnd="16dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/secondNameSettingsText"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:textColor="@color/colorPrimary" />
+		<Button
+				android:id="@+id/emailSettingsText"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:textAlignment="gravity"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/colorPrimaryDark"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/emailLabel"
+				android:textAllCaps="false"
+				android:background="@drawable/bg_send_message" />
+		
+		<!-- Username Editing -->
+		<TextView
+				android:id="@+id/usernameLabel"
+				android:text="@string/username"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginTop="8dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginEnd="16dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/emailSettingsText"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:textColor="@color/colorPrimary" />
+		<Button
+				android:id="@+id/usernameSettingsText"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:textAlignment="gravity"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/colorPrimaryDark"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/usernameLabel"
+				android:textAllCaps="false"
+				android:background="@drawable/bg_send_message" />
+		
+		<!-- Password Editing -->
+		<TextView
+				android:id="@+id/passwordLabel"
+				android:text="@string/password"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginTop="8dp"
+				android:layout_marginStart="16dp"
+				android:layout_marginEnd="16dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/usernameSettingsText"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:textColor="@color/colorPrimary" />
+		<Button
+				android:id="@+id/passwordSettingsText"
+				android:text="@string/change_password"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="16dp"
+				android:textAlignment="gravity"
+				android:gravity="center_vertical"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/colorPrimaryDark"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/passwordLabel"
+				android:textAllCaps="false"
+				android:background="@drawable/bg_send_message" />
+		<Space
+				android:layout_width="0dp"
+				android:layout_height="120dp"
+				app:layout_constraintTop_toBottomOf="@id/passwordSettingsText"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent" />
+	</android.support.constraint.ConstraintLayout>
 </ScrollView>
